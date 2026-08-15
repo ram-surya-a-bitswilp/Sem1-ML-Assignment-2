@@ -161,7 +161,12 @@ if input_type == "Upload CSV":
 
     if raw_input_df is not None and not raw_input_df.empty:
         st.subheader("📋 Dataset Preview")
-        st.dataframe(raw_input_df.head(), use_container_width=True)
+
+        st.dataframe(
+            raw_input_df.head(20),  # Display up to top 20 rows
+            use_container_width=True,
+            height=300  # Enables vertical scrolling within 300px container
+        )
 
 # Option 2: Interactive Data Entry Table
 else:
