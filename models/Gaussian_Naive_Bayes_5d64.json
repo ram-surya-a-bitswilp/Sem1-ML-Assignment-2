@@ -1,0 +1,20 @@
+{
+    "model_id": "5d64",
+    "model_name": "Gaussian_Naive_Bayes",
+    "model_params": {
+        "priors": null,
+        "var_smoothing": 1e-09
+    },
+    "total_parameters": 120,
+    "training_start": "2026-08-15 15:23:49",
+    "training_end": "2026-08-15 15:23:49",
+    "total_training_time_seconds": 0.004,
+    "metrics": {
+        "accuracy": 0.9210526315789473,
+        "precision": 0.9211336032388665,
+        "recall": 0.9210526315789473,
+        "f1_score": 0.9203962286669054,
+        "mcc_score": 0.8291617197562593,
+        "auc_score": 0.9890873015873015
+    }
+}

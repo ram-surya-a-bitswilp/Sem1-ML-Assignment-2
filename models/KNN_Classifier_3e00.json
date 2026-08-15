@@ -1,0 +1,26 @@
+{
+    "model_id": "3e00",
+    "model_name": "KNN_Classifier",
+    "model_params": {
+        "algorithm": "auto",
+        "leaf_size": 30,
+        "metric": "minkowski",
+        "metric_params": null,
+        "n_jobs": null,
+        "n_neighbors": 5,
+        "p": 2,
+        "weights": "uniform"
+    },
+    "total_parameters": 13650,
+    "training_start": "2026-08-15 15:23:47",
+    "training_end": "2026-08-15 15:23:47",
+    "total_training_time_seconds": 0.003,
+    "metrics": {
+        "accuracy": 0.956140350877193,
+        "precision": 0.9568690958164642,
+        "recall": 0.956140350877193,
+        "f1_score": 0.9557756825927252,
+        "mcc_score": 0.9058238738943076,
+        "auc_score": 0.982308201058201
+    }
+}
