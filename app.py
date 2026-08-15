@@ -142,10 +142,24 @@ raw_input_df = None
 
 # Option 1: CSV File Upload
 if input_type == "Upload CSV":
-    uploaded_file = st.file_uploader("Upload Test CSV File", type=["csv"], help="Drag and drop your dataset here")
-    if uploaded_file is not None:
-        raw_input_df = pd.read_csv(uploaded_file)
-        st.success(f"Successfully loaded CSV with **{raw_input_df.shape[0]}** rows and **{raw_input_df.shape[1]}** columns.")
+    col_toggle, _ = st.columns([1, 3])
+    with col_toggle:
+        use_sample_csv = st.toggle("📁 Load default 'test_data.csv'", value=False)
+
+    if use_sample_csv:
+        try:
+            # Load the local sample CSV file
+            raw_input_df = pd.read_csv("test_data.csv")
+            st.success(f"Loaded sample **test_data.csv** with **{raw_input_df.shape[0]}** rows and **{raw_input_df.shape[1]}** columns.")
+        except FileNotFoundError:
+            st.error("Could not find 'test_data.csv' in the root project directory. Please check the file path.")
+    else:
+        uploaded_file = st.file_uploader("Upload Test CSV File", type=["csv"], help="Drag and drop your dataset here")
+        if uploaded_file is not None:
+            raw_input_df = pd.read_csv(uploaded_file)
+            st.success(f"Successfully loaded CSV with **{raw_input_df.shape[0]}** rows and **{raw_input_df.shape[1]}** columns.")
+
+    if raw_input_df is not None and not raw_input_df.empty:
         st.subheader("📋 Dataset Preview")
         st.dataframe(raw_input_df.head(), use_container_width=True)
 
