@@ -20,7 +20,7 @@ The model pipeline is trained and evaluated using the **Breast Cancer Wisconsin 
 ---
 
 ## c. Github Repository Link
-**Repository Link:** [https://github.com/your-username/breast-cancer-diagnostic-ml](https://github.com/ram-surya-a-bitswilp/Sem1-ML-Assignment-2)
+**Repository Link:** [https://github.com/ram-surya-a-bitswilp/Sem1-ML-Assignment-2](https://github.com/ram-surya-a-bitswilp/Sem1-ML-Assignment-2)
 
 ---
 
